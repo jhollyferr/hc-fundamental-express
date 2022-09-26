@@ -1,0 +1,17 @@
+{
+  "name": "hc-fundamental-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jhollyferr/hc-fundamental-express.git",
+  "author": "Jhollyfer Rodrigues <jhollyferr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "nodemon ./index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
