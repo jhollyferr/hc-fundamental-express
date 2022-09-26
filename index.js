@@ -1,6 +1,7 @@
-const { response } = require("express");
 const express = require("express");
 const path = require("path");
+
+const userRoute = require("./routes/user");
 
 const port = 5000;
 
@@ -21,6 +22,8 @@ server.use(express.static("public"));
 server.get("/", (request, response) => {
   response.sendFile(`${basePath}/index.html`);
 });
+
+server.use("/user", userRoute);
 
 server.use((request, response, next) => {
   response.status(404).sendFile(`${basePath}/notFound.html`);
