@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
-
-const userRoute = require("./routes/user");
+const routes = require("./routes");
 
 const port = 5000;
 
@@ -23,7 +22,7 @@ server.get("/", (request, response) => {
   response.sendFile(`${basePath}/index.html`);
 });
 
-server.use("/user", userRoute);
+server.use("/api", routes);
 
 server.use((request, response, next) => {
   response.status(404).sendFile(`${basePath}/notFound.html`);
